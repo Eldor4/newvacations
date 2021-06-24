@@ -8,11 +8,11 @@ app.use(require('cors')())
 
 app.use('/users',require('./router/users'))
 app.use('/flights',require('./router/flights'))
-app.use("/build",express.static("build"))
+app.use("/public",express.static("public"))
 
 const port = process.env.PORT || 1777;
 app.get('/**', (req, res) => {
- res.sendFile(path.join(__dirname, 'build', 'index.html'));
+ res.sendFile(path.join(__dirname, 'public', 'index.html'));
 })
 app.listen(port, () => {
  console.log(`App listening on port ${port}!`)
