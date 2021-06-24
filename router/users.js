@@ -108,5 +108,5 @@ router.put('/unfollowers_vacations',verifyUser,async(req,res)=>{
 })
 
 //UPDATE
-//DELETE    
+//DELETE.
 module.exports = router
